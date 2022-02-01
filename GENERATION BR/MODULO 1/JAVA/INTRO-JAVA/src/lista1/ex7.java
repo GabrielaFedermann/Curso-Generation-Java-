@@ -3,7 +3,7 @@
  *  Escreva um sistema que lê os coeficientes a,b,c,d,e e f e calcula e mostra os valores de x e y.
  */
 
-package lista1;
+package Lista1;
 
 import java.util.Scanner;
 

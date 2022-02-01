@@ -5,7 +5,7 @@
  *   escrever um sistema que leia o custo de fábrica de um carro e escreva o custo ao consumidor. 
  */
 
-package lista1;
+package Lista1;
 
 import java.util.Scanner;
 

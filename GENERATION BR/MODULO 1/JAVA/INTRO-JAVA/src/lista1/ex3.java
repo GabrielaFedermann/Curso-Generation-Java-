@@ -3,7 +3,7 @@
  * em segundos e mostre-o expresso em horas, minutos e segundos.
  */
 
-package lista1;
+package Lista1;
 
 import java.util.Scanner;
 

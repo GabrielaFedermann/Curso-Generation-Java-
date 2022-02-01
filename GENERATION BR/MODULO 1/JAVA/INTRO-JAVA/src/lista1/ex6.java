@@ -4,7 +4,7 @@
  *  D = RAIZ QUADRADA DE (X2-X1)AO QUADRADO + (Y2-Y1) AO QUADRADO
  */
 
-package lista1;
+package Lista1;
 
 import java.util.Scanner;
 

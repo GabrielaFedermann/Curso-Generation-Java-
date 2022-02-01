@@ -3,8 +3,7 @@
  *   calcule a seguinte expressão: D = (R+S)*2 -- ONDE R = (A+B) AO QUADRADO E S = (B+C) AO QUADRADO
  */
 
-package lista1;
-
+package Lista1;
 import java.util.Scanner;
 
 public class ex4 {

@@ -1,4 +1,4 @@
-package lista2;
+package Lista2;
 
 public class ex4 {
 
