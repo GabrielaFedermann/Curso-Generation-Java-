@@ -2,7 +2,7 @@
  * 1- Informar todos os números de 1000 a 1999 que quando divididos por 11
 obtemos resto = 5. (FOR)
  */
-package Lista2;
+package lista2;
 
 import java.util.Scanner;
 

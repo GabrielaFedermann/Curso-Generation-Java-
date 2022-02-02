@@ -1,4 +1,4 @@
-package Heranca;
+package heranca;
 
 public class Cavalo extends animal{
 	

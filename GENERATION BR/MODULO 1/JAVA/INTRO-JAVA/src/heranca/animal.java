@@ -1,4 +1,4 @@
-package Heranca;
+package heranca;
 
 public class animal {
 	private String nome;
