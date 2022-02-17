@@ -53,8 +53,7 @@ SELECT * FROM tb_classe WHERE nick LIKE 'c%';
 SELECT * FROM tb_personagens WHERE def BETWEEN 1000 AND 2000;
 SELECT * FROM tb_personagens WHERE str BETWEEN 2000 AND 10000;
 select *from tb_personagens;
-
-select a.personagem, b.id_personagens
-FROM tb_classe as a
-INNER JOIN tb_personagens as b
-                on a.personagem = b.id_personagens;
+                
+ select str as "força", dez as destreza, agi as agilidade, inte as inteligência, def as defesa, tb_classe.nick as Nick, tb_classe.idade as Idade, tb_classe.classe as Classe, tb_classe.raca as Raça, tb_classe.arma as Arma from tb_personagens INNER JOIN tb_classe on tb_classe.personagem=tb_personagens.fk_classe;
+ 
+ UPDATE tb_classe SET jogo_id = 3  WHERE personagem = 3;
