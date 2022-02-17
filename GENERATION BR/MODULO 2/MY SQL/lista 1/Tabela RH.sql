@@ -25,3 +25,5 @@ SELECT * FROM rh.funcionarios;
 SELECT * FROM rh.funcionarios WHERE salario >= 2000.00;
 
 SELECT * FROM rh.funcionarios WHERE salario <= 2000.00;
+
+ UPDATE funcionarios SET funcao = "socio"  WHERE registro = 4;

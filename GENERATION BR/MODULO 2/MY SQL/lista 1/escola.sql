@@ -31,3 +31,5 @@ SELECT * FROM escola.matricula;
 SELECT * FROM escola.matricula WHERE nota >= 7;
 
 SELECT * FROM escola.matricula WHERE nota <= 7;
+
+ UPDATE matricula SET materia = "espanhol"  WHERE chamada = 1;

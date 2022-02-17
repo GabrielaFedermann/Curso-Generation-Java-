@@ -31,3 +31,5 @@ SELECT * FROM ecommerce.produto;
 SELECT * FROM ecommerce.produto WHERE valor >= 500.00;
 
 SELECT * FROM ecommerce.produto WHERE valor <= 500.00;
+
+ UPDATE produto SET quantia = 3  WHERE registro = 2;
