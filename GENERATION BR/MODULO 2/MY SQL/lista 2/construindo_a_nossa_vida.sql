@@ -26,7 +26,7 @@ select * from tb_produto;
 insert into tb_categoria(localizacao, tipo) values ("urbana", "predio comercial");
 insert into tb_categoria(localizacao, tipo) values ("urbana", "residencil");
 insert into tb_categoria(localizacao, tipo) values ("urbana", "mista");
-insert into tb_categori(localizacao, tipo) values ("rural", "comercial");
+insert into tb_categoria(localizacao, tipo) values ("rural", "comercial");
 insert into tb_categoria(localizacao, tipo) values ("rural", "residencial");
 insert into tb_categoria(localizacao, tipo) values ("rural", "interna");
 insert into tb_categoria(localizacao, tipo) values ("urbana", "interna");
@@ -48,3 +48,4 @@ SELECT * FROM tb_produto WHERE valor BETWEEN 3 AND 60;
 SELECT * FROM tb_produto WHERE valor >= 50;
 select *from tb_produto;
 
+select localizacao as "Area da construção", tipo as "Tipo de construção", tb_produto.nome as Produto, tb_produto.estoque as "Temos em estoque", tb_produto.valor as "R$", tb_produto.descricao as Detalhes from tb_categoria INNER JOIN tb_produto on tb_produto.codigo_categoria=tb_categoria.codigo_categoria;

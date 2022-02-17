@@ -49,3 +49,4 @@ SELECT * FROM tb_produto WHERE valor BETWEEN 3 AND 60;
 SELECT * FROM tb_produto WHERE valor >= 50;
 select *from tb_produto;
 
+select categoria as "tipo de medicação", loja as "Localização da loja", tb_produto.medicamento as medicação, tb_produto.dosagem as dosagem, tb_produto.valor as "R$", tb_produto.fabricante as "empresa fabricante"  from tb_categoria INNER JOIN tb_produto on tb_produto.codigo_categoria=tb_categoria.codigo_categoria;

@@ -49,3 +49,4 @@ SELECT * FROM tb_produto WHERE valor BETWEEN 3 AND 60;
 SELECT * FROM tb_produto WHERE valor >= 50;
 select *from tb_produto;
 
+select fornecedor as Responsavel, fazenda as "Proveniencia do produto", tb_produto.tipo as "tipo de carne", tb_produto.corte as "corte da carne", tb_produto.peso as "kilo", tb_produto.valor as R$ from tb_categoria INNER JOIN tb_produto on tb_produto.codigo_categoria=tb_categoria.codigo_categoria;
