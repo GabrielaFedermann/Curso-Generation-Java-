@@ -3,7 +3,6 @@ package org.generation.blog_pessoal.controller;
 
 import java.util.List;
 
-import org.generation.blog_pessoal.model.Postagem;
 import org.generation.blog_pessoal.model.Tema;
 import org.generation.blog_pessoal.repository.TemaRepository;
 import org.springframework.beans.factory.annotation.Autowired;
