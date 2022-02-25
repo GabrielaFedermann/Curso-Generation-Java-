@@ -1,19 +1,19 @@
 package org.generation.blog_pessoal.model;
 
-import java.util.Date;
+import java.util.List;
 
 import javax.persistence.Entity;
+import javax.persistence.Table;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.Table;
-import javax.persistence.Temporal;
-import javax.persistence.TemporalType;
+import javax.persistence.OneToMany;
 import javax.validation.constraints.NotNull;
-import javax.validation.constraints.Size;
+
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 @Entity
-@Table(name = "Tema")
+@Table(name = "tb_tema")
 public class Tema {
 
 	@Id
@@ -21,16 +21,11 @@ public class Tema {
 	private long id;
 
 	@NotNull
-	@Size(min = 5, max = 100)
-	private String tema;
-
-	@NotNull
-	@Size(min = 10, max = 500)
 	private String descricao;
-
+	@OneToMany(mappedBy = "tema, cascade = CascadeType.ALL")
+	@JsonIgnoreProperties("tema")
 	
-	@Temporal(TemporalType.TIMESTAMP)
-	private Date date = new java.sql.Date(System.currentTimeMillis());
+	private List<Postagem> postagem;
 
 	public long getId() {
 		return id;
@@ -38,14 +33,6 @@ public class Tema {
 
 	public void setId(long id) {
 		this.id = id;
-	}
-
-	public String getTema() {
-		return tema;
-	}
-
-	public void setTema(String tema) {
-		this.tema = tema;
 	}
 
 	public String getDescricao() {
@@ -56,12 +43,12 @@ public class Tema {
 		this.descricao = descricao;
 	}
 
-	public Date getDate() {
-		return date;
+	public List<Postagem> getPostagem() {
+		return postagem;
 	}
 
-	public void setDate(Date date) {
-		this.date = date;
+	public void setPostagem(List<Postagem> postagem) {
+		this.postagem = postagem;
 	}
 
 }
