@@ -78,6 +78,12 @@
 			<version>1.6.3</version>
 		</dependency>
 
+		<!-- mysql dependencies-->
+		<dependency>
+			<groupId>org.postgresql</groupId>
+			<artifactId>postgresql</artifactId>
+		</dependency>
+
 		<!-- Test dependencies -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
