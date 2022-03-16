@@ -28,9 +28,9 @@ public class UsuarioRepositoryTest {
 	@BeforeAll
 	void start () {
 		usuarioRepository.deleteAll();
-		usuarioRepository.save(new Usuario(1,"Isabela","isa@email.com.br", "123456"));
-		usuarioRepository.save(new Usuario(2,"Allan", "allan@email.com.br", "654321"));
-		usuarioRepository.save(new Usuario(3,"Sofia", "sofi@email.com.br", "1147258"));
+		usuarioRepository.save(new Usuario(1,"Isabela","","isa@email.com.br", "12345678"));
+		usuarioRepository.save(new Usuario(2,"Allan","", "allan@email.com.br", "65432155"));
+		usuarioRepository.save(new Usuario(3,"Sofia","", "sofi@email.com.br", "114725888"));
 		
 	}
 	@Test

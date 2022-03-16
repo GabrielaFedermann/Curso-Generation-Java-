@@ -14,43 +14,42 @@ import io.swagger.v3.oas.models.responses.ApiResponses;
 
 @Configuration
 public class SwaggerConfig {
+
 	@Bean
-	public OpenAPI springBlogPessoalOpenAPI() {
+	public OpenAPI springOpenAPI() {
 		return new OpenAPI()
 				.info(new Info()
-						.title("Project Blog Pessoal")
-						.description("Projeto Blog Pessoa - Gabriela Federmann")
+						.title("Project Gees")
+						.description("This is a Ecomerce project")
 						.version("v0.0.1")
-				.license(new License()
-						.name("Blog da Gaby")
-						.url("https://github.com/GabrielaFedermann/Curso-Generation-Java-/tree/main/GENERATION%20BR/blog_pessoal"))
-				.contact(new Contact()
-						.name("https://github.com/GabrielaFedermann")
-						.email("gabyfederman@gmail.com")))
+						.license(new License()
+								.name("Gees Brazil")
+								.url("<https://brazil.generation.org/>"))
+						.contact(new Contact()
+								.name("Github Boaz")
+								.url("<https://github.com/GustavoBoaz/>")
+								.email("gustavo.boaz@hotmail.com")))
 				.externalDocs(new ExternalDocumentation()
-						.description("Github")
-						.url("https://github.com/GabrielaFedermann/"));
+						.description("Github Project")
+						.url("<https://github.com/GustavoBoaz/project_Gees>"));
 	}
-	@Bean
-	public OpenApiCustomiser customerGlobalHeaderOpenApiCustomiser() {
-		return openApi ->{
-			openApi.getPaths().values().forEach(pathItem -> pathItem.readOperations().forEach(operation ->{
-				
-				ApiResponses apiResponses = operation.getResponses();
-				
-				apiResponses.addApiResponse("200", createApiResponse("Sucesso!!"));
-				apiResponses.addApiResponse("201", createApiResponse("Objeto Persistido!!"));
-				apiResponses.addApiResponse("204", createApiResponse("Objeto Excluido!!"));
-				apiResponses.addApiResponse("400", createApiResponse("Erro na Requisição!!"));
-				apiResponses.addApiResponse("401", createApiResponse("Acesso não autorizado!!"));
-				apiResponses.addApiResponse("404", createApiResponse("Objeto não encontrado!!"));
-				apiResponses.addApiResponse("500", createApiResponse("Erro na aplicação!!"));
-				
-			}));
-		};
-	}
+
 	private ApiResponse createApiResponse(String message) {
 		return new ApiResponse().description(message);
 	}
 
+	@Bean
+	public OpenApiCustomiser customerGlobalResponseStatus() {
+		return openApi -> {
+			openApi.getPaths().values().forEach(pathItem -> pathItem.readOperations().forEach(operation -> {
+				ApiResponses api = operation.getResponses();
+
+				api.addApiResponse("200", createApiResponse("Sucess!"));
+				api.addApiResponse("201", createApiResponse("Created!"));
+				api.addApiResponse("400", createApiResponse("Request error!"));
+				api.addApiResponse("401", createApiResponse("Not authorized!"));
+				api.addApiResponse("500", createApiResponse("Internal server Error!"));
+			}));
+		};
+	}
 }
